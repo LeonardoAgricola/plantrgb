@@ -1,10 +1,10 @@
-# sugarcaneRGB
+# Find plants in RGB image
 
 Scrip para identificar plantas de cana-de-açúcar em imagens RGB geradas por RPA's
 
 Classificação não-supervisionada com o algoritmo k-means
 
-A bibliotecas necessárias são:
+Os pacotes necessários são:
 
 ```
 fiona
@@ -22,7 +22,7 @@ from files import open_img, save_mask
 from segmentrgb import classify
 
 pathimg = r'example\sugarcane.tif'
-pathout = r'example\maks.tif'
+pathout = r'example\mask.tif'
 
 #open image
 image, profile = open_img(pathimg)
