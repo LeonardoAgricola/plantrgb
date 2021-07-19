@@ -10,12 +10,6 @@ import json
 import rasterio
 from rasterio.mask import mask
 
-def check_scr(img, bound):
-    srci = img.crs
-    if img.crs is None:
-        img.crs = 'epsg:4323'
-    srcb = bound.crs
-    return srci
 
 def getFeatures(gdf):
     return [json.loads(gdf.to_json())['features'][0]['geometry']]
